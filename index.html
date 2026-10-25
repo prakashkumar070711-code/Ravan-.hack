@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hacker Terminal</title>
+<style>
+body {
+  background: black;
+  color: #00ff00;
+  font-family: monospace;
+  padding: 20px;
+}
+h2 { color: red; }
+#terminal {
+  white-space: pre-wrap;
+  font-size: 15px;
+}
+</style>
+</head>
+<body>
+
+<h2>⚠ RAVAN TERMINAL ⚠</h2>
+<div id="terminal"></div>
+
+<script>
+const messages = [
+  "[+] Initializing terminal...",
+  "[+] Loading security modules...",
+  "[+] Connecting to demo server...",
+  "[+] Scanning test environment...",
+  "[+] Encryption: AES-256",
+  "[+] Security simulation running...",
+  "[✓] DEMO COMPLETE!",
+  "[!] No real system accessed."
+];
+
+let i = 0;
+
+function run() {
+  if (i < messages.length) {
+    document.getElementById("terminal").textContent +=
+      messages[i] + "\n";
+    i++;
+    setTimeout(run, 1000);
+  }
+}
+
+run();
+</script>
+
+</body>
+</html>
